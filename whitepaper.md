@@ -205,24 +205,24 @@ curl -g 'http://localhost:9090/api/v1/query_exemplars?query=test_exemplar_metric
 {
 "status": "success",
 "data": [
-{
-"seriesLabels": {
-"__name__": "test_exemplar_metric_total",
-"instance": "localhost:8090",
-"job": "prometheus",
-"service": "bar"
-},
-"exemplars": [
-{
-"labels": {
-"traceID": "EpTxMJ40fUus7aGY"
-},
-"value": "6",
-"timestamp": 1600096945.479,
-}
-]
-},
-(...)
+   {
+      "seriesLabels": {
+         "__name__": "test_exemplar_metric_total",
+         "instance": "localhost:8090",
+         "job": "prometheus",
+         "service": "bar"
+      },
+      "exemplars": [
+         {
+            "labels": {
+               "traceID": "EpTxMJ40fUus7aGY"
+             },
+             "value": "6",
+             "timestamp": 1600096945.479,
+         }
+      ]
+   },
+   (...)
 ```
 请注意，query参数不是专门 ExemplarsQL 设计的， 此 API 希望被用在任何 PromQL 查询的地方例如看板、告警或者规则。 该仪表支持解析这些query参数以及所有用过这个参数的series，并返回这些series相关的exemplars。
 这个 API 很快就被 Grafana 采用了，即使是现在，您也可以在最新版本的 AGPLv3 许可 Grafana 上呈现exemplars并允许快速链接到trace视图。
