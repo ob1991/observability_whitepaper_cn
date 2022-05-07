@@ -1,4 +1,4 @@
-此文为中文翻译，原文地址https://github.com/cncf/tag-observability/blob/main/whitepaper.md#executive-summary
+此文为中文翻译，原文地址https://github.com/cncf/tag-observability/blob/main/whitepaper.md
 # 摘要
 
 随着软件的复杂性及所处理的数据量的持续增长，我们需要可观测性技术来了解工作负载的状况。软件工程师除了要了解可观测性工具外，还需要了解如何监控和观测程序成为了共识。随着对服务等级目标的更高要求，这就需要软件工程师能够更快的找到造成服务异常的原因。
